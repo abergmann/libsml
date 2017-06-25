@@ -8,15 +8,19 @@ It can be utilized to communicate to FNN specified Smart Meters or Smart Meter c
 An example how to use libSML is in the examples directory.
 
 #### Dependencies
-Ubuntu
+openSUSE
 
-	apt-get install uuid-dev uuid-runtime
+	zypper install libuuid1 libuuid-devel
 
 #### Compilation
  
+	aclocal
+	autoconf
+	libtoolize
+	automake --add-missing
+	./configure
 	make
-
-The resulting binaries are located in sml/lib
+	make install
 
 ### License
 Copyright 2011 Juri Glass, Mathias Runge, Nadim El Sayed - DAI-Labor, TU-Berlin
